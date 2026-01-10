@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Catering Form</title>
+  <link rel="stylesheet" href="../Final_Assignment/css/Catering%20Style.css">
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+</head>
+<body>
+<h1>CATERING FORM</h1>
+<p class="form-directions" style="text-align: center">
+  Please fill out this catering form to request our services.
+  Fields marked with <span class="required">*</span> are required.
+</p>
+<form
+  action="submission-complete.html"
+  class="fs-form fs-layout__2-column"
+  target="_top"
+  method="POST"
+>
+  <div id="Web-page_Core">
+    <fieldset>
+      <legend class="fs-fieldset-title">Contact Information</legend>
+      <div class="fs-field">
+        <label class="fs-label required" for="full-name">Full Name <span class="required">*</span></label>
+        <input
+          class="fs-input"
+          id="full-name"
+          name="full-name"
+          placeholder="Enter your full name"
+          required
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label required" for="email-address">Email Address <span class="required">*</span></label>
+        <input
+          class="fs-input"
+          id="email-address"
+          name="email-address"
+          placeholder="Enter your email address"
+          required
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label required" for="phone-number">Phone Number <span class="required">*</span></label>
+        <input
+          class="fs-input"
+          id="phone-number"
+          name="phone-number"
+          placeholder="Enter your phone number"
+          required
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="company-name">
+          Company/Organization Name
+        </label>
+        <input
+          class="fs-input"
+          id="company-name"
+          name="company-name"
+          placeholder="Enter your company/organization name (optional)"
+        />
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="fs-fieldset-title">Event Details</legend>
+      <div class="fs-field">
+        <label class="fs-label required" for="event-type">Event Type <span class="required">*</span></label>
+        <select class="fs-select" id="event-type" name="event-type" required>
+          <option value="wedding">Wedding</option>
+          <option value="birthday">Birthday</option>
+          <option value="corporate-event">Corporate Event</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+
+      <div class="fs-field">
+        <label class="fs-label required">Event Setting <span class="required">*</span></label>
+        <div class="fs-radio-group">
+          <div class="fs-radio-field">
+            <input class="fs-radio" type="radio" id="indoor" name="event-setting" value="indoor" required>
+            <label class="fs-label" for="indoor">Indoor</label>
+          </div>
+          <div class="fs-radio-field">
+            <input class="fs-radio" type="radio" id="outdoor" name="event-setting" value="outdoor">
+            <label class="fs-label" for="outdoor">Outdoor</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="fs-field">
+        <label class="fs-label required" for="event-date">Event Date <span class="required">*</span></label>
+        <input
+          class="fs-input"
+          id="event-date"
+          name="event-date"
+          placeholder="Enter the event date"
+          required
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label required" for="event-time">Event Time <span class="required">*</span></label>
+        <input
+          class="fs-input"
+          id="event-time"
+          name="event-time"
+          placeholder="Enter the event time"
+          required
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label required" for="guest-count">Number of Guests <span class="required">*</span></label>
+        <input
+          class="fs-input"
+          id="guest-count"
+          name="guest-count"
+          placeholder="Enter the number of guests"
+          required
+        />
+      </div>
+      <div class="fs-field col-span-full">
+        <label class="fs-label required" for="event-location">Event Location/Address <span class="required">*</span></label>
+        <textarea
+          class="fs-textarea"
+          id="event-location"
+          name="event-location"
+          placeholder="Enter the detailed address of the event"
+          required
+        ></textarea>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="fs-fieldset-title">Catering Preferences</legend>
+      <div class="fs-field">
+        <label class="fs-label required" for="menu-type">Menu Type <span class="required">*</span></label>
+        <select class="fs-select" id="menu-type" name="menu-type" required>
+          <option value="buffet">Buffet</option>
+          <option value="sit-down">Sit-Down</option>
+          <option value="finger-foods">Finger Foods</option>
+          <option value="custom">Custom</option>
+        </select>
+      </div>
+      <div class="fs-field">
+        <label class="fs-label required">Specific Dishes or Packages <span class="required">*</span></label>
+        <div class="fs-checkbox-group">
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="specific-dishes-vegetarian"
+                name="specific-dishes"
+                required
+                type="checkbox"
+                value="vegetarian"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="specific-dishes-vegetarian">
+                Vegetarian
+              </label>
+            </div>
+          </div>
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="specific-dishes-non-vegetarian"
+                name="specific-dishes"
+                required
+                type="checkbox"
+                value="non-vegetarian"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="specific-dishes-non-vegetarian">
+                Non-Vegetarian
+              </label>
+            </div>
+          </div>
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="specific-dishes-desserts"
+                name="specific-dishes"
+                required
+                type="checkbox"
+                value="desserts"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="specific-dishes-desserts">
+                Desserts
+              </label>
+            </div>
+          </div>
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="specific-dishes-custom-dishes"
+                name="specific-dishes"
+                required
+                type="checkbox"
+                value="custom-dishes"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="specific-dishes-custom-dishes">
+                Custom Dishes
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fs-field col-span-full">
+        <label class="fs-label" for="dietary-restrictions">
+          Dietary Restrictions/Preferences
+        </label>
+        <textarea
+          class="fs-textarea"
+          id="dietary-restrictions"
+          name="dietary-restrictions"
+          placeholder="e.g., vegan, gluten-free, nut allergies"
+        ></textarea>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="fs-fieldset-title">Logistics and Additional Services</legend>
+      <div class="fs-field">
+        <label class="fs-label">Staffing Requirements</label>
+        <div class="fs-checkbox-group">
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="staffing-requirements-waitstaff"
+                name="staffing-requirements"
+                type="checkbox"
+                value="waitstaff"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="staffing-requirements-waitstaff">
+                Waitstaff
+              </label>
+            </div>
+          </div>
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="staffing-requirements-bartenders"
+                name="staffing-requirements"
+                type="checkbox"
+                value="bartenders"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="staffing-requirements-bartenders">
+                Bartenders
+              </label>
+            </div>
+          </div>
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="staffing-requirements-cleanup-crew"
+                name="staffing-requirements"
+                type="checkbox"
+                value="cleanup-crew"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="staffing-requirements-cleanup-crew">
+                Cleanup Crew
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fs-field">
+        <label class="fs-label">Rental Equipment</label>
+        <div class="fs-checkbox-group">
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="rental-equipment-tables"
+                name="rental-equipment"
+                type="checkbox"
+                value="tables"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="rental-equipment-tables">Tables</label>
+            </div>
+          </div>
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="rental-equipment-chairs"
+                name="rental-equipment"
+                type="checkbox"
+                value="chairs"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="rental-equipment-chairs">Chairs</label>
+            </div>
+          </div>
+          <div class="fs-checkbox-field">
+            <div class="fs-checkbox-wrapper">
+              <input
+                class="fs-checkbox"
+                id="rental-equipment-utensils"
+                name="rental-equipment"
+                type="checkbox"
+                value="utensils"
+              />
+            </div>
+            <div>
+              <label class="fs-label" for="rental-equipment-utensils">
+                Utensils
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fs-field col-span-full">
+        <label class="fs-label" for="special-requests">Special Requests</label>
+        <textarea
+          class="fs-textarea"
+          id="special-requests"
+          name="special-requests"
+          placeholder="e.g., decorations, custom themes, etc."
+        ></textarea>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend class="fs-fieldset-title">Payment Preferences</legend>
+      <div class="fs-field">
+        <label class="fs-label required" for="payment-method">Payment Method <span class="required">*</span></label>
+        <select
+          class="fs-select"
+          id="payment-method"
+          name="payment-method"
+          required
+        >
+          <option value="credit-card">Credit Card</option>
+          <option value="bank-transfer">Bank Transfer</option>
+          <option value="cash">Cash</option>
+        </select>
+      </div>
+      <div class="fs-field">
+        <label class="fs-label required" for="deposit-amount">Deposit Amount <span class="required">*</span></label>
+        <input
+          class="fs-input"
+          id="deposit-amount"
+          name="deposit-amount"
+          placeholder="Enter the deposit amount or percentage"
+          required
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="cardholder-name">Cardholder Name</label>
+        <input
+          class="fs-input"
+          id="cardholder-name"
+          name="cardholder-name"
+          placeholder="Enter the name on the card (if applicable)"
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="card-number">Card Number</label>
+        <input
+          class="fs-input"
+          id="card-number"
+          name="card-number"
+          placeholder="Enter the card number (if applicable)"
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="card-expiration-date">Expiration Date</label>
+        <input
+          class="fs-input"
+          id="card-expiration-date"
+          name="card-expiration-date"
+          placeholder="Enter the expiration date (MM/YYYY)"
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="card-cvv">CVV</label>
+        <input
+          class="fs-input"
+          id="card-cvv"
+          name="card-cvv"
+          placeholder="Enter the CVV (if applicable)"
+        />
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="fs-checkbox-field">
+        <div class="fs-checkbox-wrapper">
+          <input
+            class="fs-checkbox"
+            id="terms-agreement"
+            name="terms-agreement"
+            required
+            type="checkbox"
+            value="agree"
+          />
+        </div>
+        <div>
+          <label class="fs-label" for="terms-agreement">
+            I agree to the <strong><em>Terms and Conditions</em></strong>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <div class="fs-checkbox-field">
+      <div class="fs-checkbox-wrapper">
+        <input
+          class="fs-checkbox"
+          id="cancellation-policy-agreement"
+          name="cancellation-policy-agreement"
+          required
+          type="checkbox"
+          value="agree"
+        />
+      </div>
+      <div>
+        <label class="fs-label" for="cancellation-policy-agreement">
+          I understand the cancellation policy
+        </label>
+      </div>
+    </div>
+    <div class="fs-button-group">
+      <button class="fs-button" type="submit">Submit</button>
+      <button class="fs-button" type="reset">Reset</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
